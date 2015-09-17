@@ -410,7 +410,6 @@ MarkerLabel_.prototype.setMandatoryStyles = function () {
   this.eventDiv_.style.opacity = 0.01; // Don't use 0; DIV won't be clickable on MSIE
   this.eventDiv_.style.MsFilter = "\"progid:DXImageTransform.Microsoft.Alpha(opacity=1)\"";
   this.eventDiv_.style.filter = "alpha(opacity=1)"; // For MSIE
-  this.eventDiv_.style.webkitOpacity = 0.01;
 
   this.setAnchor();
   this.setPosition(); // This also updates z-index, if necessary.
