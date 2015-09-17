@@ -138,11 +138,11 @@ MarkerLabel_.prototype.onAdd = function () {
     me.marker_.setAnimation(null);
   };
 
-  this.getPanes().overlayImage.appendChild(this.labelDiv_);
+  this.getPanes().markerLayer.appendChild(this.labelDiv_);
   this.getPanes().overlayMouseTarget.appendChild(this.eventDiv_);
   // One cross is shared with all markers, so only add it once:
   if (typeof MarkerLabel_.getSharedCross.processed === "undefined") {
-    this.getPanes().overlayImage.appendChild(this.crossDiv_);
+    this.getPanes().markerLayer.appendChild(this.crossDiv_);
     MarkerLabel_.getSharedCross.processed = true;
   }
 
@@ -410,6 +410,7 @@ MarkerLabel_.prototype.setMandatoryStyles = function () {
   this.eventDiv_.style.opacity = 0.01; // Don't use 0; DIV won't be clickable on MSIE
   this.eventDiv_.style.MsFilter = "\"progid:DXImageTransform.Microsoft.Alpha(opacity=1)\"";
   this.eventDiv_.style.filter = "alpha(opacity=1)"; // For MSIE
+  this.eventDiv_.style.webkitOpacity = 0.01;
 
   this.setAnchor();
   this.setPosition(); // This also updates z-index, if necessary.
