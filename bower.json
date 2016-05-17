@@ -1,0 +1,16 @@
+{
+  "name": "google-maps-utility-library-v3",
+  "homepage": "https://github.com/printercu/google-maps-utility-library-v3-read-only",
+  "authors": [
+    "Google Inc",
+    "Max Melentiev"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "google",
+    "maps"
+  ],
+  "license": "Apache 2.0"
+}
